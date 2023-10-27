@@ -1,5 +1,23 @@
 package ba.edu.ibu.quiz2;
 
+/**
+ Write a class called Animal that will have three attributes: name of type String and age of type int and enum attribute called Color
+ (values of the Color enum are: BLACK, WHITE, RED, GREEN). Create getters and setters for all the attributes. Create three constructors:
+ first that accepts and sets the value of the name attribute, second that accepts the and sets the age attribute and third that accepts
+ and sets all three of the above-mentioned attributes. Create one more method called runSound of the return type String that returns
+ "Animal running" upon calling.
+
+ Create one more class called Tiger that inherits the Animal class and has one more attribute of type int called numOfTeeth and provide
+ the get and set method for that attribute. Provide the constructor that sets the value for the field numOfTeeth and calls the third
+ parent constructor previously explained (the one with all the fields being set). Also, override the method runSound so that for the
+ Tiger class it returns String "Tiger running".
+
+ Create one more class called Lion that inherits the Animal class and has one more attribute of type int called bearLength and provide
+ the get and set method for that attribute. Provide the constructor that sets the value for the field bearLength and calls the first
+ parent constructor previously explained (the one with that accepts and sets the value only for the name attribute). Also, override the
+ method runSound so that for the Lion class it returns String "Lion running".
+ * */
+
 enum Color {
     BLACK, WHITE, RED, GREEN
 }
@@ -76,7 +94,7 @@ class Tiger extends Animal {
 }
 
 class Lion extends Animal {
-    int bearLength;
+    private int bearLength;
 
     public Lion(String name, int age, int bearLength) {
         super(name);
