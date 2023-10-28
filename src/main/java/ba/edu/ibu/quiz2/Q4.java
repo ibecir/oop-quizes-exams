@@ -1,5 +1,25 @@
 package ba.edu.ibu.quiz2;
 
+/**
+ Write a class called Shape that will have three attributes: name of type String, numOfSides of type int and enum attribute Colors
+ (attribute name is color), values of the Colors enum are: BLACK, GRAY, YELLOW. Create getters and setters for all the attributes.
+ Create three constructors: first that accepts and sets the value of the name attribute, second that accepts the and sets the numOfSides
+ attribute and third that accepts and sets all three of the above-mentioned attributes in the order they have been listed. Create
+ one more method called drawShape of the return type String that returns "Shape drawn" upon calling.
+
+ Create one more class called Cube that inherits the Shape class and has one more attribute of type int called height and
+ provide the get and set method for that attribute. Provide the constructor that sets the value for the field height and calls the
+ third parent constructor previously explained (the one with all the fields being set). Also, override the method drawShape so that
+ for the Cube class it returns String "Cube drawn". Constructor for Cube class should receive parameter as follows:
+ public Cube(String name, int numOfSides, Colors color, int height)
+
+ Create one more class called Rectangle that inherits the Shape class and has one more attribute of type int called length and provide
+ the get and set method for that attribute. Provide the constructor that sets the value for the field length and calls the first
+ parent constructor previously explained (the one with that accepts and sets the value only for the name attribute). Also, override the
+ method drawShape so that for the Rectangle class it returns String "Rectangle drawn".  Constructor for Rectangle should receive
+ parameters as follows: public Rectangle(String name, int length)
+ * */
+
 enum Colors {
     BLACK, GRAY, YELLOW
 }
@@ -93,5 +113,12 @@ class Rectangle extends Shape {
     @Override
     public String drawShape(){
         return "Rectangle drawn";
+    }
+}
+
+class Something{
+    public static void main(String[] args) {
+        Rectangle rectangle = new Rectangle("My shape", 1022);
+        System.out.println(rectangle.drawShape());
     }
 }
