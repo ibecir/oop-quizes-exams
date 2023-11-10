@@ -1,57 +1,56 @@
 package ba.edu.ibu.quiz3.second;
 
-interface Eatable {
-    public String eat();
+interface Driveable{
+    public String drive();
 }
+class Car implements Driveable{
+    private String motorSound;
 
-class Elephant implements Eatable {
-    private String name;
-
-    public Elephant(String name) {
-        this.name = name;
+    public Car(String motorSound) {
+        this.motorSound = motorSound;
     }
 
-    public String getName() {
-        return name;
+    public String getMotorSound() {
+        return motorSound;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setMotorSound(String motorSound) {
+        this.motorSound = motorSound;
     }
 
     @Override
-    public String eat() {
-        return this.name + " eating";
+    public String drive(){
+        return this.motorSound;
     }
 }
 
-class Cow implements Eatable {
-    public String name;
+class Scooter implements Driveable{
+    private String sound;
 
-    public Cow(String name) {
-        this.name = name;
+    public Scooter(String sound) {
+        this.sound = sound;
     }
 
-    public String getName() {
-        return name;
+    public String getSound() {
+        return sound;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setSound(String sound) {
+        this.sound = sound;
     }
 
     @Override
-    public String eat() {
-        return this.name + " eat";
+    public String drive(){
+        return this.sound;
     }
 }
 
-class MainC {
+class MainC3{
     public static void main(String[] args) {
-        Elephant elephant = new Elephant("Slonic");
-        Cow cow = new Cow("Kravica");
+        Car car = new Car("Vrrnnn");
+        Scooter scooter = new Scooter("Fijuu");
 
-        System.out.println(elephant.eat());
-        System.out.println(cow.eat());
+        System.out.println(car.drive());
+        System.out.println(scooter.drive());
     }
 }

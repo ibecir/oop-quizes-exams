@@ -1,20 +1,12 @@
 package ba.edu.ibu.quiz3.first;
 
-import java.util.List;
-
-abstract class Animal {
+abstract class Vehicle {
     private String name;
-    private int age;
+    private int numOfWheels;
 
-    public Animal(String name, int age) {
+    public Vehicle(String name, int numOfWheels) {
         this.name = name;
-        this.age = age;
-    }
-
-    public abstract String makeSound();
-
-    public String eat() {
-        return "Animal is eating";
+        this.numOfWheels = numOfWheels;
     }
 
     public String getName() {
@@ -25,83 +17,83 @@ abstract class Animal {
         this.name = name;
     }
 
-    public int getAge() {
-        return age;
+    public int getNumOfWheels() {
+        return numOfWheels;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setNumOfWheels(int numOfWheels) {
+        this.numOfWheels = numOfWheels;
     }
+
+    abstract String makeSound();
 }
 
-class Tiger extends Animal {
+class Car extends Vehicle{
+    private int hp;
 
-    private int numOfTeeth;
-
-    public Tiger(String name, int age, int numOfTeeth) {
-        super(name, age);
-        this.numOfTeeth = numOfTeeth;
+    public Car(String name, int numOfWheels, int hp) {
+        super(name, numOfWheels);
+        this.hp = hp;
     }
 
-    public int getNumOfTeeth() {
-        return numOfTeeth;
+    public int getHp() {
+        return hp;
     }
 
-    public void setNumOfTeeth(int numOfTeeth) {
-        this.numOfTeeth = numOfTeeth;
+    public void setHp(int hp) {
+        this.hp = hp;
     }
 
     @Override
-    public String makeSound() {
-        return "Tiger sound";
+    public String makeSound(){
+        return "Car sound";
     }
 }
 
-class Sheep extends Animal {
-    private int weight;
+class Bicycle extends Vehicle{
+    private String tiersType;
 
-    public Sheep(String name, int age, int weight) {
-        super(name, age);
-        this.weight = weight;
+    public Bicycle(String name, int numOfWheels, String tiersType) {
+        super(name, numOfWheels);
+        this.tiersType = tiersType;
     }
 
-    public int getWeight() {
-        return weight;
+    public String getTiersType() {
+        return tiersType;
     }
 
-    public void setWeight(int weight) {
-        this.weight = weight;
+    public void setTiersType(String tiersType) {
+        this.tiersType = tiersType;
     }
 
     @Override
-    public String makeSound() {
-        return "Sheep sound";
+    public String makeSound(){
+        return "Bicycle";
     }
 }
 
-class AnimalHouse<T extends Animal> {
-    private T animal;
+class Garage<T extends Vehicle>{
+    private T vehicle;
 
-    public AnimalHouse(T animal){
-        this.animal = animal;
+    public Garage(T vehicle) {
+        this.vehicle = vehicle;
     }
 
-    public T getAnimal() {
-        return animal;
+    public T getVehicle() {
+        return vehicle;
     }
 
-    public void setAnimal(T animal) {
-        this.animal = animal;
+    public void setVehicle(T vehicle) {
+        this.vehicle = vehicle;
     }
 }
 
-class MainC {
+class MainC3{
     public static void main(String[] args) {
-        AnimalHouse<Tiger> tigerAnimalHouse = new AnimalHouse<>(new Tiger("Tigric", 12, 12));
-        AnimalHouse<Sheep> sheepAnimalHouse = new AnimalHouse<>(new Sheep("Ovcica", 14, 55));
-
-        System.out.println(tigerAnimalHouse.getAnimal().getNumOfTeeth());
-        System.out.println(tigerAnimalHouse.getAnimal().makeSound());
-        System.out.println(sheepAnimalHouse.getAnimal().makeSound());
+        Garage<Car> carGarage = new Garage<>(new Car("Benga", 4, 140));
+        Garage<Bicycle> bicycleGarage = new Garage<>(new Bicycle("Bemix", 2, "Continental"));
+        System.out.println(carGarage.getVehicle().getName());
+        System.out.println(carGarage.getVehicle().makeSound());
+        System.out.println(bicycleGarage.getVehicle().makeSound());
     }
 }
