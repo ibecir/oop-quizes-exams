@@ -1,42 +1,57 @@
 package ba.edu.ibu.quiz3.second;
 
-interface Readable {
-    public String getContent();
+interface Eatable {
+    public String eat();
 }
 
-class SMS implements Readable {
+class Elephant implements Eatable {
+    private String name;
 
-    private String message;
+    public Elephant(String name) {
+        this.name = name;
+    }
 
-    public SMS(String message) {
-        this.message = message;
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     @Override
-    public String getContent() {
-        return this.message;
+    public String eat() {
+        return this.name + " eating";
     }
 }
 
-class Book implements Readable {
-    private String page;
+class Cow implements Eatable {
+    public String name;
 
-    public Book(String page) {
-        this.page = page;
+    public Cow(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     @Override
-    public String getContent() {
-        return this.page;
+    public String eat() {
+        return this.name + " eat";
     }
 }
 
-class MainCT {
+class MainC {
     public static void main(String[] args) {
-        SMS sms = new SMS("My first message");
-        Book book = new Book("The page");
+        Elephant elephant = new Elephant("Slonic");
+        Cow cow = new Cow("Kravica");
 
-        System.out.println(sms.getContent());
-        System.out.println(book.getContent());
+        System.out.println(elephant.eat());
+        System.out.println(cow.eat());
     }
 }
