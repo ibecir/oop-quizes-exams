@@ -93,7 +93,7 @@ class AnimalHouse<T extends Animal> {
     }
 }
 
-class MainC {
+class MainC3 {
     public static void main(String[] args) {
         AnimalHouse<Tiger> tigerAnimalHouse = new AnimalHouse<>(new Tiger("Tigric", 12, 12));
         AnimalHouse<Sheep> sheepAnimalHouse = new AnimalHouse<>(new Sheep("Ovcica", 14, 55));

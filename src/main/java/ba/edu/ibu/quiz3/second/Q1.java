@@ -45,7 +45,7 @@ class Scooter implements Driveable{
     }
 }
 
-class MainC3{
+class MainC {
     public static void main(String[] args) {
         Car car = new Car("Vrrnnn");
         Scooter scooter = new Scooter("Fijuu");

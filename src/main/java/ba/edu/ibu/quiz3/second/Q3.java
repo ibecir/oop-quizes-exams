@@ -46,7 +46,7 @@ class Cow implements Eatable {
     }
 }
 
-class MainC {
+class MainC3 {
     public static void main(String[] args) {
         Elephant elephant = new Elephant("Slonic");
         Cow cow = new Cow("Kravica");

@@ -88,7 +88,7 @@ class Garage<T extends Vehicle>{
     }
 }
 
-class MainC3{
+class MainC {
     public static void main(String[] args) {
         Garage<Car> carGarage = new Garage<>(new Car("Benga", 4, 140));
         Garage<Bicycle> bicycleGarage = new Garage<>(new Bicycle("Bemix", 2, "Continental"));
