@@ -1,5 +1,35 @@
 package ba.edu.ibu.quiz3.first;
+/*Create an abstract class called Animal that will have two properties: name of type String and age of type int.
 
+Create a constructor for this class with both of the attributes and get and set methods. Create one abstract method called
+
+makeSound that returns type String. The class should also have method eat that returns "Animal is eating".
+
+
+
+Create a class called Tiger that extends class Animal. This class should have one property called numOfTeeth of type int. Provide a
+
+constructor for this class that sets the name, age and numOfTeeth (in that same order) and get and set methods. Provide the implementation of the
+
+makeSound method so it, for the Tiger class returns "Tiger sound".
+
+
+
+Create one more class called Sheep that extends the Animal class. This class should have one property called weight of
+
+type int. Provide a constructor for this class that sets the name, age, and weight (in that same order) and get and set methods. Provide
+
+the implementation of the  makeSound method so it, for the Sheep class returns "Sheep sound".
+
+
+
+Create an interface called AnimalHouse that as a parameter has one attribute of generic type called animal. This generic can only
+
+be an object that inherits from the Animal class. Provide the constructor that accepts that generic and sets its value. Provide
+
+The get and set methods for it.
+
+*/
 abstract class Animal {
     private String name;
     private int age;

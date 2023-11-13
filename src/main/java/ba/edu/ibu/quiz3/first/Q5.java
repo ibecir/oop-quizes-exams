@@ -1,5 +1,17 @@
 package ba.edu.ibu.quiz3.first;
+/*Create an abstract class called Shape that will have two properties: name and type of type String.  Create a constructor for this class with both of the attributes and get and set methods. Create one abstract method called getArea that returns type int. The class should also have method sayHello that returns "Hello from shape".
 
+
+
+Create a class called Square that extends class Shape. This class should have one property called sideLength of type int. Provide a constructor for this class that sets the name, type and sideLength (in that same order) and get and set methods. Provide the implementation of the getArea method so it, for the Square class returns 10.
+
+
+
+Create one more class called Circle that extends the Shape class. This class should have one property called radius of type int. Provide a constructor for this class that sets the name, type, and radius (in that same order) and get and set methods. Provide the implementation of the walk method so it, for the Circle class returns 15.
+
+
+
+Create an interface called ShapeHouse that as a parameter has one attribute of generic type called shape. This generic can only be an object that inherits from the Shape class. Provide the constructor that accepts that generic and sets its value. Provide the get and set methods for it.*/
 abstract class Shape {
     private String name;
     private String type;
