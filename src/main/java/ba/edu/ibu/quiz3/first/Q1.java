@@ -1,5 +1,23 @@
 package ba.edu.ibu.quiz3.first;
 
+/*
+Create an abstract class called Vehicle that will have two properties: name of type String and numOfWheels of type int.
+Create a constructor for this class with both of the attributes and get and set methods. Create one abstract method called
+makeSound that returns type String.
+
+Create a class called Car that extends class Vehicle. This class should have one property called hp of type int. Provide a
+constructor for this class that sets the name, numOfWheels and hp (in that same order). Provide the implementation of the
+makeSound method so it, for the Car class returns "Car".
+
+Create one more class called Bicycle that extends the Vehicle class. This class should have one property called tiersType of
+type String. Provide a constructor for this class that sets the name, numOfWheels and tiersType (in that same order). Provide
+the implementation of the  makeSound method so it, for the Car class returns "Bicycle".
+
+Create an interface called Garage that as a parameter has one attribute of generic type called vehicle. This generic can only
+be an object that inherits from the Vehicle class. Provide the constructor that accepts that generic and sets its value. Provide
+The get and set methods for it.
+* */
+
 abstract class Vehicle {
     private String name;
     private int numOfWheels;
@@ -46,7 +64,7 @@ class Car extends Vehicle{
 
     @Override
     public String makeSound(){
-        return "Car sound";
+        return "Car";
     }
 }
 

@@ -1,5 +1,19 @@
 package ba.edu.ibu.quiz3.second;
 
+/*
+Create and interface called Drivable that has one abstract method called drive that returns String.
+
+Create class called Car that has one property called motorSound of type String. This class should
+implement the interface Drivable and implement the method drive, so it returns the value of the
+motorSound property for the Car class instance. Provide the constructor that gets and sets the value
+of that property and implement the get and set methods for that property.
+
+Create class called Scooter that has one property called sound of type String. This class should
+implement the interface Drivable and implement the method drive, so it returns the value of sound
+property for the Scooter class instance. Provide the constructor that gets and sets the value of
+that property and implement the get and set methods for that property.
+
+* */
 interface Driveable{
     public String drive();
 }
@@ -20,7 +34,7 @@ class Car implements Driveable{
 
     @Override
     public String drive(){
-        return this.motorSound;
+        return "Car drive";
     }
 }
 
@@ -41,7 +55,7 @@ class Scooter implements Driveable{
 
     @Override
     public String drive(){
-        return this.sound;
+        return "Scooter drive";
     }
 }
 
