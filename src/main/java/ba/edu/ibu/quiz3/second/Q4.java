@@ -1,5 +1,9 @@
 package ba.edu.ibu.quiz3.second;
+/*Create and interface called Walkable that has one abstract method called walk that returns String.
 
+Create class called Student that has one property called yearOfStudy of type int. This class should implement the interface Walkable and implement the method walk, so it returns student walk for the Student class instance. Provide the constructor that gets and sets the value of that property and implement the get and set methods for that property.
+
+Create class called Assistant that has one property called title of type String. This class should implement the interface Walkable and implement the method walk, so it returns Assistant walk for the Assistant class instance. Provide the constructor that gets and sets the value of that property and implement the get and set methods for that property.*/
 interface Walkable {
     public String walk();
 }
