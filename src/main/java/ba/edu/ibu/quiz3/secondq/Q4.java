@@ -1,5 +1,15 @@
-package ba.edu.ibu.quiz3.secondq;
+package ba.edu.ibu.quiz3.first;
+/*
+Create an abstract class called Person that will have two properties: name of type String and age of type int.  Create a constructor for this class with both of the attributes and get and set methods. Create one abstract method called walk that returns type String. The class should also have method sayHello that returns "Hello".
 
+Create a class called Professor that extends class Person. This class should have one property called title of type String. Provide a constructor for this class that sets the name, age and title (in that same order) and get and set methods. Provide the implementation of the walk method so it, for the Professor class returns "Professor walk".
+
+Create one more class called Student that extends the Person class. This class should have one property called yearOfStudy of type int. Provide a constructor for this class that sets the name, age, and yearOfStudy (in that same order) and get and set methods. Provide the implementation of the walk method so it, for the Student class returns "Student walk".
+
+Create a generic class  called Classroom that as a parameter has one attribute of generic type called person. This generic can only be an object that inherits from the Person class. Provide the constructor that accepts that generic and sets its value. Provide the get and set methods for it.
+
+
+*/
 abstract class Person {
     private String name;
     private int age;

@@ -1,5 +1,13 @@
-package ba.edu.ibu.quiz3.firstq;
+package ba.edu.ibu.quiz3.second;
+/*Create and interface called Drawable that has one abstract method called drive that returns String.
 
+Create class called Rectangle that has one property called shape of type String. This class should implement the interface Drawable and implement the method draw,
+so it returns the value of the shape property for the Rectangle class instance.
+Provide the constructor that gets and sets the value of that property and implement the get and set methods for that property.
+
+Create class called Triangle that has one property called area of type int. This class should implement the interface Drawable and implement the method draw,
+so it returns the value of property for the Triangle class instance.
+Provide the constructor that gets and sets the value of that property and implement the get and set methods for that property.*/
 interface Drawable {
     public String draw();
 }
@@ -21,7 +29,7 @@ class Rectangle implements Drawable {
 
     @Override
     public String draw() {
-        return "Draw rectangle";
+        return "Draw Rectangle";
     }
 }
 
@@ -42,7 +50,7 @@ class Triangle implements Drawable {
 
     @Override
     public String draw() {
-        return "Triangle rectangle";
+        return "Draw Triangle ";
     }
 }
 

@@ -1,5 +1,17 @@
-package ba.edu.ibu.quiz3.secondq;
+package ba.edu.ibu.quiz3.first;
+/*Create an abstract class called Card that will have two properties: cardNo of type String and balance of type int.  Create a constructor for this class with both of the attributes and get and set methods. Create one abstract method called makePayment that returns type String.
 
+
+
+Create a class called CreditCard that extends class Card. This class should have one property called limit of type int. Provide a constructor for this class that sets the cardNo, balance and limit (in that same order) and get and set methods. Provide the implementation of the makePayment method so it, for the CreditCard class returns "CC payment".
+
+
+
+Create one more class called CreditCard that extends the Card class. This class should have one property called cvc of type int. Provide a constructor for this class that sets the cardNo, balance, and cvc (in that same order) and get and set methods. Provide the implementation of the makePayment method so it, for the DebitCard class returns "DC payment".
+
+
+
+Create an interface called Bank that as a parameter has one attribute of generic type called card. This generic can only be an object that inherits from the Card class. Provide the constructor that accepts that generic and sets its value. Provide the get and set methods for it*/
 abstract class Card {
     private String cardNo;
     private int balance;

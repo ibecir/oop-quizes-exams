@@ -1,5 +1,22 @@
-package ba.edu.ibu.quiz3.secondq;
+package ba.edu.ibu.quiz3.first;
+/*
+* Create an abstract class called Book that will have two properties: name of type String and numOfPages of type int.
+Create a constructor for this class with both of the attributes and get and set methods. Create one abstract method called
+read that returns type String.
 
+Create a class called ProgrammingBook that extends class Book. This class should have one property called cover of type string. Provide a
+constructor for this class that sets the name, numOfPages and cover (in that same order). Provide the implementation of the
+read method so it, for the ProgrammingBook class returns "Programming read".
+
+Create one more class called OOPBook that extends the Book class. This class should have one property called cover of
+type String. Provide a constructor for this class that sets the name, numOfPages and cover (in that same order). Provide
+the implementation of the read method so it, for the OOPBook class returns "OOP read".
+
+Create a generic class called Library that as a parameter has one attribute of generic type called book. This generic can only
+be an object that inherits from the Book class. Provide the constructor that accepts that generic and sets its value. Provide
+The get and set methods for it.
+
+* */
 abstract class Book {
     private String name;
     private int numOfPages;
