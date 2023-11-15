@@ -1,15 +1,14 @@
 package ba.edu.ibu.midterm.db;
 /*Write a Java program that connects to a MySQL database and retrieves data from it.
-The program has three methods: getAnimalsByType, getAnimalById, and getAnimalByName.
-The getAnimalsByType method retrieves all animals with a given type from the animals table,
-while the getAnimalById method retrieves a single animal by its ID.
-The getAnimalByName method retrieves all animals with a name of “Smoki” and an ID greater than 3.
+The program has method getAnimalByName and method retrieves all animals with a name of “Smoki” and an ID greater than 3.
 
-DB credidentials:
-
- CONNECTION_STRING = "jdbc:mysql://oop.ibu.edu.ba:3306/oopgroup1";
- USER: oopuser
+ CONNECTION_STRING = "jdbc:mysql://HOSTNAME:3306/DB_NAME";
+ USERNAME: oopuser
  PASSWORD: ooppassWD
+ HOSTNAME: oop.ibu.edu.ba
+ DB_NAME: oopgroup1
+
+ Variable username, password and connection_string must be static and final
 */
 
 import java.sql.*;

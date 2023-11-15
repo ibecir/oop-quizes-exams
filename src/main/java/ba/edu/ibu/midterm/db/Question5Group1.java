@@ -1,17 +1,15 @@
 package ba.edu.ibu.midterm.db;
 /* Write a Java program that connects to a MySQL database and retrieves data from it.
-The program should have three methods: getUsersByRole, getUserById, and getUserByName.
-The getUsersByRole method should retrieve all users with a given role from the users table,
-while the getUserById method should retrieve a single user by their ID.
-The getUserByName method should retrieve all users with a name of “Hana” and an ID greater than 2.
+The program should have a method getUserByName and it should retrieve all users with a name of “Hana” and an ID greater than 2.
 
-DB credidentials:
+ CONNECTION_STRING = "jdbc:mysql://HOSTNAME:3306/DB_NAME";
+ USERNAME: oopuser
+ PASSWORD: ooppassWD
+ HOSTNAME: oop.ibu.edu.ba
+ DB_NAME: oopgroup1
 
- CONNECTION_STRING = "jdbc:mysql://oop.ibu.edu.ba:3306/oopgroup1";
- USER: oopuser
- PASSWORD: ooppassWD */
-
-
+ Variable username, password and connection_string must be static and final
+*/
 
 import java.sql.*;
 class Question5Group1 {
