@@ -1,4 +1,4 @@
-package ba.edu.ibu.midterm;
+package ba.edu.ibu.midterm.db;
 /*Write a Java program that connects to a MySQL database and retrieves data from it.
 The program has three methods: getAnimalsByType, getAnimalById, and getAnimalByName.
 The getAnimalsByType method retrieves all animals with a given type from the animals table,

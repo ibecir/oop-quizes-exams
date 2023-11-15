@@ -1,4 +1,4 @@
-package ba.edu.ibu.midterm;
+package ba.edu.ibu.midterm.db;
 /* Write a Java program that connects to a MySQL database and retrieves data from it.
 The program should have three methods: getUsersByRole, getUserById, and getUserByName.
 The getUsersByRole method should retrieve all users with a given role from the users table,
