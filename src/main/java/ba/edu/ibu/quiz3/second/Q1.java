@@ -5,12 +5,12 @@ Create and interface called Drivable that has one abstract method called drive t
 
 Create class called Car that has one property called motorSound of type String. This class should
 implement the interface Drivable and implement the method drive, so it returns the value of the
-motorSound property for the Car class instance. Provide the constructor that gets and sets the value
+motorSound property for the Car class instance and concatenate the string " is the sound". Provide the constructor that gets and sets the value
 of that property and implement the get and set methods for that property.
 
 Create class called Scooter that has one property called sound of type String. This class should
 implement the interface Drivable and implement the method drive, so it returns the value of sound
-property for the Scooter class instance. Provide the constructor that gets and sets the value of
+property for the Scooter class instance and concatenate the string " is the sound". Provide the constructor that gets and sets the value of
 that property and implement the get and set methods for that property.
 
 * */
@@ -34,7 +34,7 @@ class Car implements Driveable{
 
     @Override
     public String drive(){
-        return "Car drive";
+        return motorSound + " is the sound";
     }
 }
 
@@ -55,7 +55,7 @@ class Scooter implements Driveable{
 
     @Override
     public String drive(){
-        return "Scooter drive";
+        return sound + " is the sound";
     }
 }
 

@@ -23,7 +23,7 @@ the implementation of the  makeSound method so it, for the Sheep class returns "
 
 
 
-Create an interface called AnimalHouse that as a parameter has one attribute of generic type called animal. This generic can only
+Create generic class called AnimalHouse that as a parameter has one attribute of generic type called animal. This generic can only
 
 be an object that inherits from the Animal class. Provide the constructor that accepts that generic and sets its value. Provide
 

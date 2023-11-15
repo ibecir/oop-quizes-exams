@@ -1,10 +1,16 @@
 package ba.edu.ibu.quiz3.second;
-/*Create and interface called Eatable that has one abstract method called eat that returns String.
+/*
+Create an interface called Eatable that has one abstract method called eat that returns String.
 
-Create class called Elephant that has one property called name of type String. This class should implement the interface Eatable and implement the method eat, so it returns the value of the name property for the Elephant class instance. Provide the constructor that gets and sets the value of that property and implement the get and set methods for that property.
+Create class called Elephant that has one property called name of type String. This class should implement the interface Eatable and implement the method eat,
+so it returns the value of the name property for the Elephant class instance and concatenate the string " eating".
+Provide the constructor that gets and sets the value of that property and implement the get and set methods for that property.
 
-Create class called Cow that has one property called name of type String. This class should implement the interface Eatable and implement the method eat, so it returns the value of name property for the Cow class instance. Provide the constructor that gets and sets the value of
-that property and implement the get and set methods for that property.*/
+Create class called Cow that has one property called name of type String. This class should implement the interface Eatable and implement the method eat,
+so it returns the value of name property for the Cow class instance and concatenate the string " eat".
+Provide the constructor that gets and sets the value of that property and implement the get and set methods for that property.
+
+*/
 interface Eatable {
     public String eat();
 }

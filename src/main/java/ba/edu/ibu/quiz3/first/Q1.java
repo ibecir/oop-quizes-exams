@@ -13,7 +13,7 @@ Create one more class called Bicycle that extends the Vehicle class. This class 
 type String. Provide a constructor for this class that sets the name, numOfWheels and tiersType (in that same order). Provide
 the implementation of the  makeSound method so it, for the Car class returns "Bicycle".
 
-Create an interface called Garage that as a parameter has one attribute of generic type called vehicle. This generic can only
+Create a generic class called Garage that as a parameter has one attribute of generic type called vehicle. This generic can only
 be an object that inherits from the Vehicle class. Provide the constructor that accepts that generic and sets its value. Provide
 The get and set methods for it.
 * */

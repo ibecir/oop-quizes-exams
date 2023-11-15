@@ -12,7 +12,7 @@ Create one more class called OOPBook that extends the Book class. This class sho
 type String. Provide a constructor for this class that sets the name, numOfPages and cover (in that same order). Provide
 the implementation of the read method so it, for the OOPBook class returns "OOP read".
 
-Create an interface called Library that as a parameter has one attribute of generic type called book. This generic can only
+Create a generic class called Library that as a parameter has one attribute of generic type called book. This generic can only
 be an object that inherits from the Book class. Provide the constructor that accepts that generic and sets its value. Provide
 The get and set methods for it.
 
