@@ -1,4 +1,4 @@
-package ba.edu.ibu.quiz3.first;
+package ba.edu.ibu.quiz3.secondq;
 
 /*
 Create an abstract class called Vehicle that will have two properties: name of type String and numOfWheels of type int.

@@ -1,4 +1,4 @@
-package ba.edu.ibu.quiz3.second;
+package ba.edu.ibu.quiz3.firstq;
 
 interface Payable {
     public int pay();

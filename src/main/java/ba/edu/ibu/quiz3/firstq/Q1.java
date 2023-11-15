@@ -1,4 +1,4 @@
-package ba.edu.ibu.quiz3.second;
+package ba.edu.ibu.quiz3.firstq;
 
 /*
 Create and interface called Drivable that has one abstract method called drive that returns String.

@@ -1,4 +1,4 @@
-package ba.edu.ibu.quiz3.first;
+package ba.edu.ibu.quiz3.secondq;
 
 abstract class Animal {
     private String name;
