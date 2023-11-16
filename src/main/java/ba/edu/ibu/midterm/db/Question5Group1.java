@@ -13,7 +13,10 @@ The program should have a method getUserByName and it should retrieve all users 
 
 import java.sql.*;
 class Question5Group1 {
-    private static final String CONNECTION_STRING = "jdbc:mysql://oop.ibu.edu.ba:3306/oopgroup1";
+    // Example of connection string:jdbc:mysql://oop.ibu.edu.ba:3306/oopgroup1";
+    private static final String CONNECTION_STRING = "jdbc:mysql://oop.ibu.edu.ba:3306/DBNAME";
+
+    //  dbname is this, username is this, password is this
     private static final String USERNAME = "oopuser";
     private static final String PASSWORD = "ooppassWD";
 
@@ -27,34 +30,10 @@ class Question5Group1 {
         }
     }
 
-    public void getUsersByRole(String role) throws SQLException {
-        PreparedStatement statement = this.connection.prepareStatement("SELECT * FROM users WHERE role = ?");
-        statement.setString(1, role);
-        ResultSet rs = statement.executeQuery();
-
-        while (rs.next()) {
-            System.out.println(rs.getString("id"));
-            System.out.println(rs.getString("name"));
-            System.out.println(rs.getString("role"));
-        }
-    }
-
-    public void getUserById(int id) throws SQLException {
-        PreparedStatement statement = this.connection.prepareStatement("SELECT * FROM users WHERE id = ?");
-        statement.setInt(1, id);
-        ResultSet rs = statement.executeQuery();
-
-        while (rs.next()) {
-            System.out.println(rs.getString("id"));
-            System.out.println(rs.getString("name"));
-            System.out.println(rs.getString("role"));
-        }
-    }
-
-    public void getUserByName() throws SQLException {
+    public void getUsers(String name, int id) throws SQLException {
         PreparedStatement statement = this.connection.prepareStatement("SELECT * FROM users WHERE name = ? AND id > ?");
-        statement.setString(1, "Hana");
-        statement.setInt(2, 2);
+        statement.setString(1, name);
+        statement.setInt(2, id);
         ResultSet rs = statement.executeQuery();
 
         while (rs.next()) {
@@ -68,8 +47,6 @@ class Question5Group1 {
 class Main{
     public static void main(String[] args) throws SQLException {
         Question5Group1 db = new Question5Group1();
-        db.getUsersByRole("admin");
-        db.getUserById(1);
-        db.getUserByName();
+        db.getUsers("Becir", 10);
     }
 }

@@ -7,6 +7,7 @@ The getTaskById method iterates over the list of tasks and returns the first tas
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 record Task(int id, String name, int priority) {}
 
@@ -29,10 +30,10 @@ class TaskList<T extends Task> {
         return result;
     }
 
-    public T getTaskById(int id) {
+    public Optional<T> getTaskById(int id) {
         for (T task : tasks) {
             if (task.id() == id) {
-                return task;
+                return Optional.ofNullable(task);
             }
         }
 
@@ -49,6 +50,5 @@ class Main4{
 
     TaskList<Task> taskList = new TaskList<>(tasks);
     List<Task> priority1Tasks = taskList.getTasksByPriority(1);
-    Task task = taskList.getTaskById(2);
-
+    Optional<Task> task = taskList.getTaskById(2);
 }
