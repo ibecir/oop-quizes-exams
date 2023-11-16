@@ -3,7 +3,9 @@ package ba.edu.ibu.midterm.generics;
 /*Write a Java program that uses generics and records to store information about a list of tasks.
 The program should have two methods: getTasksByPriority and getTaskById.
 The getTasksByPriority method iterates over the list of tasks and adds each task with the desired priority to a new list.
-The getTaskById method iterates over the list of tasks and returns the first task with the desired ID. */
+The getTaskById method iterates over the list of tasks and returns an optional task with the specified ID.
+If no task is found, it should return an empty optional.
+ */
 
 import java.util.ArrayList;
 import java.util.List;

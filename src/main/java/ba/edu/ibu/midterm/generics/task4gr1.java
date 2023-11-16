@@ -6,8 +6,6 @@ while the getStudentById method should retrieve a single student by their ID. */
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
-
 record Student(int id, String name, int grade) { }
 
 class StudentList<T extends Student> {
@@ -28,10 +26,10 @@ class StudentList<T extends Student> {
         return result;
     }
 
-    public Optional<T> getStudentById(int id) {
+    public T getStudentById(int id) {
         for (T student : students) {
             if (student.id() == id) {
-                return Optional.ofNullable(student);
+                return student;
             }
         }
         return null;
@@ -46,5 +44,5 @@ class Main3{
 
     StudentList<Student> studentList = new StudentList<>(students);
     List<Student> grade10Students = studentList.getStudentsByGrade(10);
-    Optional<Student> student = studentList.getStudentById(2);
+    Student student = studentList.getStudentById(2);
 }
