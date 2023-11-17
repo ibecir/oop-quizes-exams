@@ -1,7 +1,7 @@
 package ba.edu.ibu.midterm.db;
 /* Write a Java program that connects to a MySQL database and retrieves data from it.
 The program should have a method getUsers that takes 2 parameters name, and id.
-The method should retrieve all users with a name of “Hana” and an ID greater than 2.
+The method should retrieve all users with a name of “Becir” and an ID greater than 2.
 
  Example of connection string:"jdbc:mysql://HOSTNAME:3306/DB_NAME";
  USERNAME: oopuser

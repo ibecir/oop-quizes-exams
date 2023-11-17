@@ -1,20 +1,20 @@
 package ba.edu.ibu.midterm.db;
 /*Write a Java program that connects to a MySQL database and retrieves data from it.
-The program has method getAnimal that  has one parameter name. The method retrieves all animals with a name of “Smoki” and an ID greater than 3.
+The program has method getAnimal that  has one parameter name.
+The method retrieves all animals with a name of “Smoki” and an ID greater than 3.
 
- CONNECTION_STRING = "jdbc:mysql://HOSTNAME:3306/DB_NAME";
+ Example of connection string:"jdbc:mysql://HOSTNAME:3306/DB_NAME";
  USERNAME: oopuser
  PASSWORD: ooppassWD
  HOSTNAME: oop.ibu.edu.ba
- DB_NAME: oopgroup1
+ DB_NAME: oopgroup2
 
- Variable username, password and connection_string must be static and final
 */
 
 import java.sql.*;
 
 class Question5Group2 {
-    private static final String CONNECTION_STRING = "jdbc:mysql://oop.ibu.edu.ba:3306/oopgroup1";
+    private static final String CONNECTION_STRING = "jdbc:mysql://oop.ibu.edu.ba:3306/oopgroup2";
     private static final String USERNAME = "oopuser";
     private static final String PASSWORD = "ooppassWD";
 
