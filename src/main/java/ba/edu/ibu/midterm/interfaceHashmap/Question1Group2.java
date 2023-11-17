@@ -12,6 +12,7 @@ Now, create another interface called Salary with an abstract method receivePayme
 Implement the Salary interface in the above Teacher class, allowing teachers to receive payment.
 There can be multiple payments for a single day.
 Create a method called getAllPayments(String date) that returns the total amount on the give day.
+Create a method called countAllPayments() that returns the number of all payments ever received.
 
  */
 interface Course {
@@ -47,16 +48,30 @@ class Teacher implements Course, Salary {
     public double getAllPayments(String date) {
         return payments.get(date);
     }
+    public int countAllPayments() {
+        return payments.size();
+    }
 }
 
 class Question1Group2 {
 
     public static void main(String[] args) {
+
+        // test ONE
         Teacher teacher = new Teacher();
         teacher.teach();
-        teacher.receivePayment("20", 100.0);
-        teacher.receivePayment("20", 200.0);
-        System.out.println(teacher.getAllPayments("20"));
+        teacher.receivePayment("2023-01-01", 100.0);
+        teacher.receivePayment("2023-01-01", 200.0);
+        teacher.receivePayment("2023-01-02", 200.0);
+        System.out.println(teacher.getAllPayments("2023-01-01"));
+
+
+        // test TWO
+        teacher = new Teacher();
+        teacher.teach();
+        teacher.receivePayment("2023-01-01", 100.0);
+        teacher.receivePayment("2023-01-02", 200.0);
+        System.out.println(teacher.countAllPayments());
     }
 
 }
