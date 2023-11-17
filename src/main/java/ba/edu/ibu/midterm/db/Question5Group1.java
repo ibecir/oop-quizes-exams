@@ -43,6 +43,7 @@ class Question5Group1 {
 class Main{
     public static void main(String[] args) throws SQLException {
         Question5Group1 db = new Question5Group1();
-        db.getUsers("Becir", 10);
+        db.getUsers("Becir", 2); //treba da vrati id: 7 name: Becir i id:10 name:Becir
+        db.getUsers("Amela", 5); //treba da vrati id:6 name:Amela
     }
 }

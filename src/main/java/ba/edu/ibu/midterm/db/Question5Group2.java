@@ -47,6 +47,6 @@ class Question5Group2 {
 class Main2{
     public static void main(String[] args) throws SQLException {
         Question5Group2 db = new Question5Group2();
-        db.getAnimal("Smoki");
+        db.getAnimal("Smoki"); // treba da vrati 6, Smoki, cat
     }
 }
