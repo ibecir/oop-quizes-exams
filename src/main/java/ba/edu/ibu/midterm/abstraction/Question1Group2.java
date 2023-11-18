@@ -3,15 +3,20 @@ package ba.edu.ibu.midterm.abstraction;
 
 /*
 
-Create an abstract class called PointsProcess with two abstract methods addPoints(int points) and isValidPoints(int minPoints, int maxPoints, int points).
+You are tasked with implementing a system to track the GPA (Grade Point Average) of students. The system should allow for adding points to a student's total and checking the validity of the points based on a specified range.
 
-Extend this abstract class in a class called StudentGPA, add a variable total of type int and studentName of type String.
-Create a construction that will accept the studentName as a parameter.
+Implement the PointsProcess abstract class with the following methods:
 
-Implement the addPoints() method in the StudentGPA class, adding the new points to the total and printing "Value of X processed.".
-Implement the isValidPoints() method in the StudentGPA class, checking if the points are valid based on the min and max provided. For valid points return true, otherwise false
+abstract void addPoints(int points): Adds the given points to the total.
+abstract boolean isValidPoints(int minPoints, int maxPoints, int points): Checks if the given points are within the specified range (minPoints to maxPoints inclusive).
+Implement the StudentGPA class, which extends PointsProcess:
 
-Create a method called currentPoints() that returns the current total.
+The class should have a private instance variable total to keep track of the student's total points.
+The class should have a private instance variable studentName to store the name of the student.
+The class should have a constructor that takes the student's name as a parameter and initializes the total points to 0.0.
+Implement the currentPoints method that returns the current total points of the student.
+Implement the addPoints method to add the given points to the total and print a message `"Value of X processed."` where the X are the points handled by the addPoints method
+Implement the isValidPoints method to check if the given points are within the specified range.
 
 
  */

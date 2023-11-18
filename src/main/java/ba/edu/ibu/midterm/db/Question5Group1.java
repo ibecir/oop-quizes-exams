@@ -13,8 +13,7 @@ The method should retrieve all users with a name of “Becir” and an ID greate
 
 import java.sql.*;
 class Question5Group1 {
-    // Example of connection string: "jdbc:mysql://HOSTNAME:3306/DB_NAME"
-    private static final String CONNECTION_STRING = "jdbc:mysql://oop.ibu.edu.ba:3306/DBNAME";
+    private static final String CONNECTION_STRING = "jdbc:mysql://oop.ibu.edu.ba:3306/oopgroup1";
     private static final String USERNAME = "oopuser";
     private static final String PASSWORD = "ooppassWD";
     private Connection connection = null;
@@ -34,8 +33,7 @@ class Question5Group1 {
         ResultSet rs = statement.executeQuery();
 
         while (rs.next()) {
-            System.out.println(rs.getString("id"));
-            System.out.println(rs.getString("name"));
+            System.out.println(rs.getInt("id") + "->" + rs.getString("name"));
         }
     }
 }
