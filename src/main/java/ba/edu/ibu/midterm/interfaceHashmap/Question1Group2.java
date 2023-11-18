@@ -67,11 +67,11 @@ class Question1Group2 {
 
 
         // test TWO
-        teacher = new Teacher();
-        teacher.teach();
-        teacher.receivePayment("2023-01-01", 100.0);
-        teacher.receivePayment("2023-01-02", 200.0);
-        System.out.println(teacher.countAllPayments());
+        Teacher teacher2 = new Teacher();
+        teacher2.teach();
+        teacher2.receivePayment("2023-01-01", 100.0);
+        teacher2.receivePayment("2023-01-02", 200.0);
+        System.out.println(teacher2.countAllPayments());
     }
 
 }

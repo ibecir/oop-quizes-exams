@@ -101,6 +101,8 @@ class Q1Tests{
         Cigarettes cigarette = new Cigarettes("Malboro", 6, 0.8);
         Chocolate chocolate = new Chocolate("Milka", 3, 22);
 
+        Chocolate chocolates = new Chocolate("Dorina", 7, 18);
+
         // 0.2
         System.out.println(cigarette.getName());
 
@@ -110,8 +112,11 @@ class Q1Tests{
         // 0.3
         System.out.println(cigarette.calculateTax());
 
-        // 0.3
+        // 0.1
         System.out.println(chocolate.calculateTax());
+
+        // 0.2
+        System.out.println(chocolates.calculateTax());
     }
 }
 

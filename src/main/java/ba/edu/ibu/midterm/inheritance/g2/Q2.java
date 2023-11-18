@@ -102,6 +102,8 @@ class Q2Tests {
         Professor professor = new Professor("Becir", 1000, "My title");
         Assistant assistant = new Assistant("Amila", 999, 1);
 
+        Assistant aassistant = new Assistant("Adnann", 1892, 9);
+
         // 0.2
         System.out.println(professor.getName());
 
@@ -111,7 +113,10 @@ class Q2Tests {
         // 0.3
         System.out.println(professor.calculateBonus());
 
-        // 0.3
+        // 0.1
         System.out.println(assistant.calculateBonus());
+
+        // 0.2
+        System.out.println(aassistant.calculateBonus());
     }
 }

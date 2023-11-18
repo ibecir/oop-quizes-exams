@@ -30,16 +30,14 @@ class Question5Group2 {
 
 
 
-    public void getAnimal(String name) throws SQLException {
+    public void getAnimals(String name, int id) throws SQLException {
         PreparedStatement statement = this.connection.prepareStatement("SELECT * FROM animals WHERE name = ? AND id > ?");
-        statement.setString(1, "Smoki");
-        statement.setInt(2, 2);
+        statement.setString(1, name);
+        statement.setInt(2, id);
         ResultSet rs = statement.executeQuery();
 
         while (rs.next()) {
-            System.out.println(rs.getString("id"));
-            System.out.println(rs.getString("name"));
-            System.out.println(rs.getString("type"));
+            System.out.println(rs.getString("id") + "->" + rs.getString("name") + "->" + rs.getString("type"));
         }
     }
 }
@@ -47,6 +45,7 @@ class Question5Group2 {
 class Main2{
     public static void main(String[] args) throws SQLException {
         Question5Group2 db = new Question5Group2();
-        db.getAnimal("Smoki"); // treba da vrati 6, Smoki, cat
+        db.getAnimals("Smoki", 2); // treba da vrati 6, Smoki, cat
+        db.getAnimals("Mum", 2); // treba da vrati 6, Smoki, cat
     }
 }

@@ -13,6 +13,7 @@ Implement the Payment interface in the above Student class, allowing students to
 There can be multiple payments for a single day.
 Create a method called getPayment(String date) that returns the total amount on the give day.
 
+Note: Use the hashmaps where the key is day and value is the amount
  */
 interface Enrollable {
     void enroll();
@@ -57,6 +58,13 @@ class Question1Group1 {
         student.makePayment("20", 100.0);
         student.makePayment("20", 200.0);
         System.out.println(student.getPayment("20"));
+
+        Student students = new Student();
+        students.enroll();
+        students.makePayment("2023-11-03", 83.0);
+        students.makePayment("2023-11-03", 91.0);
+        students.makePayment("2023-12-03", 200.0);
+        System.out.println(students.getPayment("2023-11-03"));
     }
 
 }
