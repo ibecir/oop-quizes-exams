@@ -51,8 +51,6 @@ class CreditCardPayment extends PaymentProcess {
         balance += amount;
         System.out.println("Payment of $" + amount + " processed.");
     }
-
-
 }
 
 public class Question1Group1 {
