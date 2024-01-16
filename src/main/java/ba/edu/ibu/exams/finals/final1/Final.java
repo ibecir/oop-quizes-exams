@@ -187,7 +187,7 @@ public class Final {
             for (int i = 1; i < lines.size(); i++) {
                 String[] tempLine = lines.get(i).split(";");
                 if (tempLine[0] == "" || tempLine[1] == "" || tempLine[2] == "")
-                    throw new InvalidCastException("The values must not be empty");
+                    throw new InvalidCastException("The values must not be empty", new ClassCastException("Values are empty"));
 
                 jobs.add(
                         new Job.JobBuilder()
@@ -245,7 +245,7 @@ class CustomFileWriter {
 
 class MainRun {
     public static void main(String[] args) {
-        Final finalInstance = new Final("jobs-updated.csv");
+        Final finalInstance = new Final("ssjobs-updated.csv");
 
         CustomFileWriter.writeReport("final-exam.csv", finalInstance.getJobs());
     }
