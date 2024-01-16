@@ -245,8 +245,8 @@ class CustomFileWriter {
 
 class MainRun {
     public static void main(String[] args) {
-        Final finalInstance = new Final("ssjobs-updated.csv");
+        Final finalInstance = new Final("first-group.csv");
 
-        CustomFileWriter.writeReport("final-exam.csv", finalInstance.getJobs());
+        CustomFileWriter.writeReport("first-group-output.csv", finalInstance.getJobs());
     }
 }

@@ -13,7 +13,7 @@ class JobTest {
 
     @BeforeEach
     void loadJobs(){
-        Final finalInstance = new Final("jobs-updated.csv");
+        Final finalInstance = new Final("first-group.csv");
         jobs = finalInstance.getJobs();
     }
 
