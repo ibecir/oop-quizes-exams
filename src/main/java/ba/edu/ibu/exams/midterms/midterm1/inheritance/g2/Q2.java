@@ -1,4 +1,4 @@
-package ba.edu.ibu.midterm.inheritance.g2;
+package ba.edu.ibu.exams.midterms.midterm1.inheritance.g2;
 
 /*
 You are tasked with designing a Java program to calculate bonuses for employees based on their roles.

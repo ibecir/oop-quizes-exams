@@ -1,33 +1,31 @@
-package ba.edu.ibu.midterm.generics;
+package ba.edu.ibu.exams.midterms.midterm1.generics;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Optional;
 
 /*
-You are given a set of Java classes representing items, including a base class Item, and two subclasses Fruit and Pasteta.
+You are given a set of Java classes representing items, including a base class Item, and two subclasses Milk and Honey.
 Item should have two attributes: barcode: int, name: String
 Additionally, there is an Order class that is parameterized with a generic type T extending the Item class and
 one attribute: items: List<T>
-Generate constructor for this Order class that sets the value of items attribute. Implement get and set methods for the items attribute.
 
 Your task is to implement a functionality in the Order class to filter items by name and retrieve an item by its barcode.
 The Order class should have two methods:
 
- - Optional<List<T>> filterByName(String name): This method should filter and return a Optional list of items with the specified name.
+ - List<T> filterByName(String name): This method should filter and return a list of items with the specified name.
 
- - Optional<T> getByBarcode(int barcode): This method should retrieve and return the Optional of item with the specified barcode.
+ - T getByBarcode(int barcode): This method should retrieve and return the item with the specified barcode.
 
 Your implementation should take advantage of the existing class hierarchy and ensure that the methods work correctly
 with objects of the Milk and Honey classes or any other class extending the Item class.
 * */
 
-class Item2 {
+class Item {
     private int barcode;
     private String name;
 
-    public Item2(int barcode, String name) {
+    public Item(int barcode, String name) {
         this.barcode = barcode;
         this.name = name;
     }
@@ -49,22 +47,22 @@ class Item2 {
     }
 }
 
-class Fruit extends Item2 {
-    public Fruit(int barcode, String name) {
+class Milk extends Item {
+    public Milk(int barcode, String name) {
         super(barcode, name);
     }
 }
 
-class Pasteta extends Item2 {
-    public Pasteta(int barcode, String name) {
+class Honey extends Item {
+    public Honey(int barcode, String name) {
         super(barcode, name);
     }
 }
 
-class Order2<T extends Item2> {
+class Order<T extends Item> {
     private List<T> items;
 
-    public Order2(List<T> items) {
+    public Order(List<T> items) {
         this.items = items;
     }
 
@@ -76,45 +74,44 @@ class Order2<T extends Item2> {
         this.items = items;
     }
 
-    public Optional<List<T>> filterByName(String name) {
+    public List<T> filterByName(String name) {
         List<T> result = new ArrayList<>();
 
         for (T item : items) {
             if (item.getName().equals(name))
                 result.add(item);
         }
-        return Optional.ofNullable(result);
+        return result;
     }
 
-    public Optional<T> getByBarcode(int barcode) {
+    public T getByBarcode(int barcode) {
         for (T item : items) {
             if (item.getBarcode() == barcode)
-                return Optional.ofNullable(item);
+                return item;
         }
-        return Optional.ofNullable(null);
+        return null;
     }
 }
 
-class MainTask {
+class MainTask1 {
     public static void main(String[] args) {
 
-        Order2<Item2> order = new Order2<>(Arrays.asList(
-                new Fruit(333, "Jabuka"),
-                new Fruit(432, "Jabuka"),
-                new Pasteta(777, "Argeta")
+        Order<Item> order = new Order<>(Arrays.asList(
+                new Honey(123, "Med"),
+                new Honey(234, "Med"),
+                new Milk(444, "Meggle")
         ));
 
-        Optional<Item2> i = order.getByBarcode(333);
-        System.out.println(i.get().getBarcode());
-        Optional<Item2> i2 = order.getByBarcode(432);
-        System.out.println(i2.get().getBarcode());
+        Item i = order.getByBarcode(444);
+        System.out.println(i.getBarcode());
+        Item i2 = order.getByBarcode(123);
 
-        Optional<List<Item2>> items1 = order.filterByName("Jabuka");
-        for (Item2 it : items1.get())
+        List<Item> items1 = order.filterByName("Med");
+        for (Item it : items1)
             System.out.println(it.getBarcode());
 
-        Optional<List<Item2>> items2 = order.filterByName("Argeta");
-        for (Item2 it2 : items2.get())
+        List<Item> items2 = order.filterByName("Meggle");
+        for (Item it2 : items2)
             System.out.println(it2.getBarcode());
     }
 }

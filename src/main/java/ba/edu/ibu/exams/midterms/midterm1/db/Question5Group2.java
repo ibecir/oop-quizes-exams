@@ -1,4 +1,4 @@
-package ba.edu.ibu.midterm.db;
+package ba.edu.ibu.exams.midterms.midterm1.db;
 /*Write a Java program that connects to a MySQL database and retrieves data from it.
 The program has method getAnimal that  has one parameter name.
 The method retrieves all animals with a name of “Smoki” and an ID greater than 3.
@@ -14,7 +14,7 @@ The method retrieves all animals with a name of “Smoki” and an ID greater th
 import java.sql.*;
 
 class Question5Group2 {
-    private static final String CONNECTION_STRING = "jdbc:mysql://oop.ibu.edu.ba:3306/oopgroup2";
+    private static final String CONNECTION_STRING = "jdbc:mysql://oop.ibu.edu.ba:3306/oopgroup2?allowPublicKeyRetrieval=true&useSSL=false";
     private static final String USERNAME = "oopuser";
     private static final String PASSWORD = "ooppassWD";
 

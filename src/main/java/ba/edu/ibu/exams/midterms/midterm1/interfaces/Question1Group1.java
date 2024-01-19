@@ -1,4 +1,4 @@
-package ba.edu.ibu.midterm.interfaces;
+package ba.edu.ibu.exams.midterms.midterm1.interfaces;
 
 import java.util.HashMap;
 

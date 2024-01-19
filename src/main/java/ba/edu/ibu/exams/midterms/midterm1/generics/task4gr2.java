@@ -1,4 +1,4 @@
-package ba.edu.ibu.midterm.generics;
+package ba.edu.ibu.exams.midterms.midterm1.generics;
 
 /*Create two records, Task and Note. The Task record should have fields id of type int, name, and priority of type int.
 The Note record should have fields id of type int, title, and content, both of type String.

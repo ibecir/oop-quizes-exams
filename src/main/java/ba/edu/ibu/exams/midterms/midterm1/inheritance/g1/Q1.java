@@ -1,4 +1,4 @@
-package ba.edu.ibu.midterm.inheritance.g1;
+package ba.edu.ibu.exams.midterms.midterm1.inheritance.g1;
 
 /*
 You are tasked with developing a Java program for a simple item tax calculator.

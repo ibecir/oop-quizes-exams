@@ -1,4 +1,4 @@
-package ba.edu.ibu.midterm.abstraction;
+package ba.edu.ibu.exams.midterms.midterm1.abstraction;
 
 
 /*

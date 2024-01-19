@@ -1,4 +1,4 @@
-package ba.edu.ibu.midterm.generics;
+package ba.edu.ibu.exams.midterms.midterm1.generics;
 /*
 Create two records, Professor and Student.
 Professor record includes fields id that has type int, name and department both of type String.
