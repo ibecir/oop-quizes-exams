@@ -4,39 +4,54 @@ import java.util.List;
 import java.util.ArrayList;
 
 /*
-Question: Implement a Shape hierarchy with an abstract base class and two derived classes,
-Circle and Square. Define an interface named Drawable with a method draw() that each shape
-should implement. Additionally, create a class named ShapeManager that has a method
-drawAll(List<Drawable> shapes) which takes a list of shapes and calls the draw() method
-for each shape. Demonstrate upcasting and downcasting in your implementation.
+Problem Statement: Shape Drawing and Management System
 
-Your implementation should include:
+You are required to design a system for drawing and managing shapes. The system should include
+an interface for drawing, an abstract base class for shapes, and concrete classes representing
+Circle and Square shapes. Additionally, you need to implement a ShapeManager class that can
+process a list of shapes and modify them.
 
-An abstract class Shape with fields and methods common to all shapes.
-Two concrete classes Circle and Square that extend the Shape class.
-An interface Drawable with a method draw().
-A class ShapeManager with a method drawAll(List<Drawable> shapes).
-Ensure that you demonstrate the upcasting of Circle and Square instances to Drawable and downcasting back to their original types in your demonstration.
+Drawable Interface:
+- Create an interface named Drawable with a method void draw().
+
+Abstract Base Class:
+ - Create an abstract class named Shape that implements the Drawable interface.
+
+Concrete Classes:
+ - Create two concrete classes, Circle and Square, that extend the Shape abstract class.
+ - Include private attributes such as radius: double for Circle and
+   sideLength: double for Square, along with appropriate getter and setter methods.
+ - In class Circle, override the method draw() from the interface, so it now prints to the
+   console "Drawing Circle"
+ - In class Square, override the method draw() from the interface, so it now prints to the
+   console "Drawing Square"
+
+ShapeManager Class:
+ - Implement a class named ShapeManager with a method drawAll(List<Drawable> shapes): List<Drawable>
+ - Inside this method, iterate through the list of shapes and adjust their properties. For Circle shapes,
+   set the radius to 15, and for Square shapes, set the side length to 5.
+
+NOTE: In the drawAll method you have to downcast the object, so you are able to change the attribute values
 * */
-// Step 1: Define an interface
 interface Drawable {
     void draw();
 }
 
 // Step 2: Create an abstract base class
-abstract class Shape implements Drawable {
-    // Common fields or methods for all shapes can be added here
-}
+abstract class Shape implements Drawable { }
 
 // Step 3: Create concrete classes
 class Circle extends Shape {
-    private int radius;
+    private double radius;
 
-    public int getRadius() {
+    public Circle() {
+    }
+
+    public double getRadius() {
         return radius;
     }
 
-    public void setRadius(int radius) {
+    public void setRadius(double radius) {
         this.radius = radius;
     }
 
@@ -44,18 +59,19 @@ class Circle extends Shape {
     public void draw() {
         System.out.println("Drawing Circle");
     }
-
-    // Additional circle-specific methods or fields can be added here
 }
 
 class Square extends Shape {
-    private int sideLength;
+    private double sideLength;
 
-    public int getSideLength() {
+    public Square() {
+    }
+
+    public double getSideLength() {
         return sideLength;
     }
 
-    public void setSideLength(int sideLength) {
+    public void setSideLength(double sideLength) {
         this.sideLength = sideLength;
     }
 
@@ -63,13 +79,9 @@ class Square extends Shape {
     public void draw() {
         System.out.println("Drawing Square");
     }
-
-    // Additional square-specific methods or fields can be added here
 }
 
-// Step 4: Create a class for managing shapes
 class ShapeManager {
-    // Method to draw all shapes in the list
     List<Drawable> drawAll(List<Drawable> shapes) {
         List<Drawable> returnedShapes = new ArrayList<>();
         for (Drawable shape : shapes) {
@@ -89,20 +101,22 @@ class ShapeManager {
 
 class Main {
     public static void main(String[] args) {
-        // Create instances of Circle and Square
         Circle circle = new Circle();
         Square square = new Square();
 
-        // Upcasting to Drawable
+        circle.setRadius(155);
+        square.setSideLength(874);
+
+        System.out.println(circle.getRadius());
+        System.out.println(square.getSideLength());
+
         Drawable drawableCircle = circle;
         Drawable drawableSquare = square;
 
-        // Create a list of Drawable objects
         List<Drawable> shapes = new ArrayList<>();
-        shapes.add(drawableCircle);
-        shapes.add(drawableSquare);
+        shapes.add(circle);
+        shapes.add(square);
 
-        // Create a ShapeManager and draw all shapes
         ShapeManager shapeManager = new ShapeManager();
         List<Drawable> drawables = shapeManager.drawAll(shapes);
 

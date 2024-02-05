@@ -5,15 +5,29 @@ import java.util.HashMap;
 
 /*
 
-Create a Java interface called Enrollable with an abstract method enroll().
-Implement this interface in a class Student who enrolls in a course. The enroll() in Student should print “Enrolled in a course”.
+You are tasked with designing a system that models both financial and biological activities for
+individuals. The system should utilize interfaces to represent distinct functionalities,
+and a class to implement these interfaces, allowing individuals to perform activities
+related to breathing and making payments.
 
-Now, create another interface called Payment with an abstract method makePayment(String date, double amount).
-Implement the Payment interface in the above Student class, allowing students to make payments.
-There can be multiple payments for a single day.
-Create a method called getPayment(String date) that returns the total amount on the give day.
+Interfaces:
+    - Define two interfaces: Breathable and Payment.
+    - The Breathable interface should declare a method breath() that returns a
+      String indicating the act of breathing.
+    - The Payment interface should declare a method makePayment(String date, double amount)
+    that records a financial transaction.
 
-Note: Use the hashmaps where the key is day and value is the amount
+Human Class:
+
+- Create a class named Human that implements both the Breathable and Payment interfaces.
+    Include private attributes:
+        - String fullName to store the full name of the individual.
+        - HashMap<String, Double> payments to store financial transactions with corresponding dates.
+- Implement a constructor that initializes the attributes.
+- Implement the breath() method to return the string "Breathing".
+- Implement the makePayment(String date, double amount) method to record financial transactions
+  on a certain date. (There can be multiple payments for a single day)
+- Implement a method called getPayment(String date) that returns the total amount of money on the give day.
  */
 interface Breathable {
     String breath();
@@ -56,7 +70,8 @@ class InterfaceMidterm {
 
     public static void main(String[] args) {
         Human human = new Human("Becir Isakovic");
-        String output = human.breath();
+        System.out.println(human.breath());
+
         human.makePayment("20", 100.0);
         human.makePayment("20", 200.0);
         System.out.println(human.getPayment("20"));
