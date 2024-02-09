@@ -12,8 +12,7 @@ public class ThirdExamSocketServer {
 
     public static void socketServer(int port) {
         try {
-            ServerSocket serverSocket = new ServerSocket(2345);
-            System.out.println(serverSocket.getLocalSocketAddress());
+            ServerSocket serverSocket = new ServerSocket(port);
             while (true) {
                 Socket connection = serverSocket.accept();
                 OutputStream outputStream = connection.getOutputStream();
@@ -22,7 +21,6 @@ public class ThirdExamSocketServer {
 
                 connection.close();
                 outputStream.close();
-                System.out.println("Sent message to the client!");
             }
         } catch (IOException e) {
             throw new RuntimeException(e);
